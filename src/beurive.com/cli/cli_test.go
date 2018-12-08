@@ -324,22 +324,22 @@ func TestParseOk(t *testing.T)  {
 		} else {
 			// Check the returned command line against the expected one.
 			if len(cli) != len(set.expected.tokens) {
-				t.Errorf(`Unexpeted list of CLI tokens. Expected (%s) / Got (%s)`, strings.Join(set.expected.tokens, " "), strings.Join(set.input, " "))
+				t.Errorf(`Unexpected list of CLI tokens. Expected (%s) / Got (%s)`, strings.Join(set.expected.tokens, " "), strings.Join(set.input, " "))
 			}
 			for j, v := range set.expected.tokens {
 				if 0 != strings.Compare(cli[j], v) {
-					t.Errorf(`Unexpeted list of CLI token #%d. Expected (%s) / Got (%s)`, j, strings.Join(set.expected.tokens, " "), strings.Join(set.input, " "))
+					t.Errorf(`Unexpected list of CLI token #%d. Expected (%s) / Got (%s)`, j, strings.Join(set.expected.tokens, " "), strings.Join(set.input, " "))
 				}
 			}
 
 			// Check the returned list of arguments against the expected one.
 			if len(set.expected.args) != len(args) {
-				t.Errorf(`Unexpeted list of arguments. Expecter (%s) / Got (%s)`, strings.Join(set.expected.args, " "), strings.Join(args, " "))
+				t.Errorf(`Unexpected list of arguments. Expected (%s) / Got (%s)`, strings.Join(set.expected.args, " "), strings.Join(args, " "))
 			}
 
 			for j, v := range set.expected.args {
 				if 0 != strings.Compare(args[j], v) {
-					t.Errorf(`Unexpeted argument #%d. Expected (%s) / Got (%s)`, j, strings.Join(set.expected.tokens, " "), strings.Join(set.input, " "))
+					t.Errorf(`Unexpected argument #%d. Expected (%s) / Got (%s)`, j, strings.Join(set.expected.tokens, " "), strings.Join(set.input, " "))
 				}
 			}
 
